@@ -38,7 +38,7 @@ def cityreader(cities=[]):
         line_count = 0
         for row in readCSV:
             if line_count > 0:
-                cities.append(City(row[0], row[3], row[4]))
+                cities.append(City(row[0], float(row[3]), float(row[4])))
             line_count += 1
 
     return cities
@@ -116,8 +116,8 @@ def cityreader_stretch(lat1, lon1, lat2, lon2, cities=[]):
         max_lon = lon2
         min_lon = lon1
 
-    within = [city for city in cities if float(city.lat) >= min_lat and float(city.lat) <=
-              max_lat and float(city.lon) >= min_lon and float(city.lon) <= max_lon]
+    within = [city for city in cities if city.lat >= min_lat and city.lat <=
+              max_lat and city.lon >= min_lon and city.lon <= max_lon]
 
     return within
 
