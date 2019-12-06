@@ -81,12 +81,12 @@ for c in cities:
 
 # TODO Get latitude and longitude values from the user
 input1 = input("Enter lat1, lon1: ").split(",")
-lat_1 = int(input1[0])
-lon_1 = int(input1[1])
+lat_1 = float(input1[0])
+lon_1 = float(input1[1])
 
 input2 = input("Enter lat2, lon2: ").split(",")
-lat_2 = int(input2[0])
-lon_2 = int(input2[1])
+lat_2 = float(input2[0])
+lon_2 = float(input2[1])
 
 
 def cityreader_stretch(lat1, lon1, lat2, lon2, cities=[]):
